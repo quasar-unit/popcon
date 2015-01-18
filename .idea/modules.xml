@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/app/app/assets/javascripts/javascripts.iml" filepath="$PROJECT_DIR$/app/app/assets/javascripts/javascripts.iml" />
+      <module fileurl="file://$PROJECT_DIR$/app/public/public.iml" filepath="$PROJECT_DIR$/app/public/public.iml" />
+      <module fileurl="file://$PROJECT_DIR$/python_proto/python_proto.iml" filepath="$PROJECT_DIR$/python_proto/python_proto.iml" />
+      <module fileurl="file://$PROJECT_DIR$/webapp/webapp.iml" filepath="$PROJECT_DIR$/webapp/webapp.iml" />
+    </modules>
+  </component>
+</project>
