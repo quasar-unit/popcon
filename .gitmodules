@@ -1,4 +1,4 @@
-[submodule "popcon-server"]
+[submodule "server"]
 	path = server
-	url = https://github.com/quasar-unit/popcon-server.git
+	url = https://github.com/quasar-unit/popcon-server
 	branch = master
