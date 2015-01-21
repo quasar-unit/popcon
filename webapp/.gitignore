@@ -1,10 +1,7 @@
-# Yeoman : https://github.com/github/gitignore/blob/master/Yeoman.gitignore
-node_modules/
-bower_components/
-*.log
-
-build/
-dist/
-
+node_modules
+dist
 .tmp
 .sass-cache
+bower_component
+*.log
+build/

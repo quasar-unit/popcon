@@ -10,13 +10,13 @@
 ###
 angular
   .module('webappApp', [
-    'ngAnimate'
-    'ngAria'
-    'ngCookies'
-    'ngMessages'
-    'ngResource'
-    'ngRoute'
-    'ngSanitize'
+    'ngAnimate',
+    'ngAria',
+    'ngCookies',
+    'ngMessages',
+    'ngResource',
+    'ngRoute',
+    'ngSanitize',
     'ngTouch'
   ])
   .config ($routeProvider) ->
@@ -27,9 +27,6 @@ angular
       .when '/about',
         templateUrl: 'views/about.html'
         controller: 'AboutCtrl'
-      .when '/prototype',
-        templateUrl: 'views/prototype.html'
-        controller: 'PrototypeCtrl'
       .otherwise
         redirectTo: '/'
 
