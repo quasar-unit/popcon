@@ -9,7 +9,7 @@
 ###
 angular.module('webappApp')
   .controller 'MainCtrl', ($scope) ->
-    $scope.awesomeThings = [
+    $scope.todos = [
       'HTML5 Boilerplate'
       'AngularJS'
       'Karma'
