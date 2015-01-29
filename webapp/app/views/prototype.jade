@@ -1,0 +1,5 @@
+p This is the prototype view.
+textarea#mainTextInput(ng-keypress='mainTextKeypress($this,$event)')
+.pop(ng-repeat='pop in pops')
+  p {{ pop.id }}
+  p {{ pop.text }}
