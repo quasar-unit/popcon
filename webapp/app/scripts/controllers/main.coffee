@@ -3,12 +3,14 @@
 
 angular.module('webappApp')
 .controller 'MainCtrl', ($scope) ->
+  $scope.text = 'sddddd'
   $scope.index = 0
   $scope.todos = [
     'HTML5 Boilerplate'
     'AngasdS'
     'Karma'
   ]
+  $scope.name = 'asd'
 
 .directive 'addbutton', ($compile) ->
   return {
@@ -16,7 +18,7 @@ angular.module('webappApp')
   template: '<button ng-click="add_success()">asdasdasd</button>'
   controller: ($scope) ->
     $scope.add_success = ->
-      el = $compile('<div drag>'+$scope.todos[$scope.index]+"</div>")($scope)
+      el = $compile('<div drag contenteditable ng-model="todos['+$scope.index+']"]></div>')($scope)
       angular.element(document.getElementById("section")).append(el)
       $scope.index++
   }
@@ -45,6 +47,12 @@ angular.module('webappApp')
       $document.on('mousemove', mousemove)
       $document.on('mouseup', mouseup)
     )
+    element.on('dblclick',(event)->
+      event.preventDefault()
+      element.css({
+        backgroundColor: 'blue',
+      })
+    )
 
 
     mousemove = (event) ->
@@ -61,3 +69,19 @@ angular.module('webappApp')
       })
       $document.off('mousemove', mousemove);
       $document.off('mouseup', mouseup);
+
+.directive 'contenteditable', ->
+  return {
+    restrict: "A",
+    require: "ngModel",
+    link : (scope,element,attrs,ngModel) ->
+      read = ->
+        ngModel.$setViewValue(element.html())
+      ngModel.$render = ->
+        element.html(ngModel.$viewValue||"")
+      element.bind("blur keyup change",->
+        scope.$apply(read)
+      )
+  }
+
+
